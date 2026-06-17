@@ -54,9 +54,9 @@ EXAMPLE_QUESTIONS = [
     "What is the total indicative advance at 68% blended rate?",
 ]
 
-SYSTEM_PROMPT = """You are HealthCRED Claim Intelligence, an expert assistant for Michele at VMG Healthcare Consultants evaluating a $122M financing facility against the Howard University Hospital Q4 2025 AR portfolio.
+SYSTEM_PROMPT = """You are HealthCRED Claim Intelligence, an expert assistant for Michele at VMG Healthcare Consultants evaluating a $122M financing facility against a Q4 2025 AR portfolio.
 
-CONTEXT: Howard University Hospital Q4 2025 AR portfolio. 48,597 claims. $530.1M gross billed. Single billing entity NPI 1487740957.
+CONTEXT: Q4 2025 AR portfolio. 48,597 claims. $530.1M gross billed. Single billing entity NPI 1487740957.
 
 HARD STOPS (any fires = Hard Stop, 0% advance, no scoring):
 HS-01: ClaimStatusCode=4 (denied)
@@ -155,7 +155,7 @@ Think like a payer underwriter adjudicating whether the claim will cleanly pass.
 - Clean-pass vs audit risk: state likelihood (high/medium/low) of clean adjudication and what would break (denial, downcode, bundling, medical necessity).
 Use portfolio procedure_summary for volume context; use claim-level fields for the specific determination.
 
-BEHAVIOUR: Be precise. Cite actual field values. For claim lookups trace every dimension. For portfolio questions use the live summary. For what-if questions recalculate and show the delta. Audience is Michele at VMG Healthcare Consultants evaluating a $122M financing facility.
+BEHAVIOUR: Be precise. Cite actual field values. For claim lookups trace every dimension. For portfolio questions use the live summary. For what-if questions recalculate and show the delta. Audience is Michele at VMG Healthcare Consultants evaluating a $122M financing facility. Do not name the client hospital or facility in user-facing responses.
 """
 
 CUSTOM_CSS = """
@@ -773,7 +773,7 @@ def main() -> None:
     render_sidebar()
 
     st.title("HealthCRED Claim Intelligence")
-    st.caption("Howard University Hospital Q4 2025 AR — Claim Financeability")
+    st.caption("Q4 2025 AR Portfolio — Claim Financeability")
 
     if show_dashboard():
         render_stats_row(summary)
