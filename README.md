@@ -41,7 +41,7 @@ The dashboard hides during an active conversation so the chat area stays clean w
 ### AI chat assistant
 
 - Natural-language questions via **`st.chat_input()`** (no file upload required)
-- Powered by **Claude Sonnet** (`claude-sonnet-4-20250514`)
+- Powered by **Claude Sonnet** (`claude-sonnet-4-6`)
 - Conversation history persisted in session state
 - Sidebar **example questions** for common analyses
 - **Clear conversation** button to reset chat and restore the dashboard
@@ -173,7 +173,7 @@ Examples for Track A (Commercial): ≥85 Finance Eligible (80–85% advance tier
 ## Prerequisites
 
 - **Python 3.11** (see [`runtime.txt`](runtime.txt))
-- **Anthropic API key** with access to `claude-sonnet-4-20250514`
+- **Anthropic API key** with access to `claude-sonnet-4-6`
 - CSV data files in `outputs/` (see above)
 - ~500 MB disk for virtualenv + dependencies
 
@@ -249,7 +249,7 @@ Open the URL shown in the terminal (typically `http://localhost:8501`).
 |----------|---------|-------------|
 | `CSV_PATH` | `outputs/claim_explanation_spine.csv` | Claim spine |
 | `PAYER_CSV_PATH` | `outputs/payer_performance.csv` | Payer performance |
-| `MODEL` | `claude-sonnet-4-20250514` | Claude model ID |
+| `MODEL` | `claude-sonnet-4-6` | Claude model ID |
 | `MAX_TOKENS` | `2000` | Max response tokens |
 
 ### API key

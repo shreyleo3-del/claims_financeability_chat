@@ -16,7 +16,7 @@ import streamlit as st
 
 CSV_PATH = "outputs/claim_explanation_spine.csv"
 PAYER_CSV_PATH = "outputs/payer_performance.csv"
-MODEL = "claude-sonnet-4-20250514"
+MODEL = "claude-sonnet-4-6"
 MAX_TOKENS = 2000
 UUID_PATTERN = re.compile(
     r"[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}"
